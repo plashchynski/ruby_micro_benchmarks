@@ -5,6 +5,12 @@ task :bench do
   puts RUBY_DESCRIPTION
   printf "%-35s user     system      total        real\n", ''
   require File.dirname(__FILE__) + '/lib/benchmark'
-  require File.dirname(__FILE__) + '/benchmarks/array.rb'
-  require File.dirname(__FILE__) + '/benchmarks/string.rb'
+
+  if ENV.include? 'FILE'
+    require ENV['FILE']
+  else
+    ['array', 'string', 'operators'].each do |file|
+      require File.dirname(__FILE__) + "/benchmarks/#{file}"
+    end
+  end
 end

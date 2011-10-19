@@ -17,3 +17,7 @@ Benchmarks are run using rake. To install rake simply run:
 	gem install rake
 
 Type "rake" to run the benchmarks.
+
+also you can specify a benchmark file to run:
+
+rake FILE=./benchmarks/operators.rb
