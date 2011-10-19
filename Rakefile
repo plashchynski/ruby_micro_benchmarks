@@ -6,10 +6,10 @@ task :bench do
   printf "%-35s user     system      total        real\n", ''
   require File.dirname(__FILE__) + '/lib/benchmark'
 
-  if ENV.include? 'FILE'
+  if ENV['FILE']
     require ENV['FILE']
   else
-    ['array', 'string', 'operators'].each do |file|
+    ['array', 'string', 'operators', 'hash'].each do |file|
       require File.dirname(__FILE__) + "/benchmarks/#{file}"
     end
   end
