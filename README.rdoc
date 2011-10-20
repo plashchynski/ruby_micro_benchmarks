@@ -1,15 +1,13 @@
+== About
 The Ruby micro benchmarks is a suite for measuring the performance of Ruby methods and operators.
 Created in order to answer questions like what is faster array[0] or array.first, 'string' or "string", 'a: ' << a << 'b: ' << b or "a: #{a} b: #{b}". Results of these benchmarks are sometimes unexpected and interest to optimize a performance of a program on Ruby.
 
-
-== GETTING THE SUITE
+== Getting
 To obtain the suite, simply run:
 
     git clone git://github.com/plashchynski/ruby-micro-benchmarks.git
 
-
-
-== RUNNING THE SUITE
+== Running
 Benchmarks are run using rake. To install rake simply run:
 
     gem install rake
