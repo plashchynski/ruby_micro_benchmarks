@@ -1,5 +1,20 @@
 require 'benchmark'
 
+def head
+  $stderr.puts RUBY_DESCRIPTION
+  $stderr.printf "%-35s user     system      total        real\n", ''
+end
+
+def run_benchmarks
+  ['array', 'string', 'operators', 'hash'].each do |file|
+    run_benchmark File.dirname(__FILE__) + "/../benchmarks/#{file}"
+  end
+end
+
+def run_benchmark(file)
+  require file
+end
+
 def benchmark(title, input_data = nil, count = 1, &block)
   input_data.is_a?(Array) ? benchmark_cycle(title, input_data, count, &block) : measure(title, input_data, count, &block)
 end
@@ -13,7 +28,8 @@ end
 
 def measure(title, input_data, count, &block)
   input_string = input_data ? " (#{input_data.size}):" : ''
-  printf "%-30s %s", title + input_string, Benchmark.measure {
+  $stderr.printf "%-30s ", title + input_string
+  $stderr.puts Benchmark.measure {
     count.times { block.call(input_data) }
   }.to_s
 end

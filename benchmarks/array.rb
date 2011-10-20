@@ -1,5 +1,5 @@
 @input_data = [0,1000,10_000]
-@count = 100_000
+@count = 1_000_000
 
 benchmark("array.first", @input_data, @count) do |array|
   array.first
