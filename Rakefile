@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/lib/benchmark'
+require File.dirname(__FILE__) + '/lib/ruby_micro_benchmarks'
 
 task :default => :bench
 
