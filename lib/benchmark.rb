@@ -6,9 +6,7 @@ def head
 end
 
 def run_benchmarks
-  ['array', 'string', 'operators', 'hash'].each do |file|
-    run_benchmark File.dirname(__FILE__) + "/../benchmarks/#{file}"
-  end
+  Dir[File.expand_path("#{File.dirname(__FILE__)}/../benchmarks/*.rb")].each {|f| require f }
 end
 
 def run_benchmark(file)
