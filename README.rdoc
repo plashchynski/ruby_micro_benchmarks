@@ -5,15 +5,21 @@ Created in order to answer questions like what is faster array[0] or array.first
 == Getting
 To obtain the suite, simply run:
 
+    gem install ruby_micro_benchmarks
+
+You can also get the suite sources from github:
+
     git clone git://github.com/plashchynski/ruby-micro-benchmarks.git
 
+
 == Running
-Benchmarks are run using rake. To install rake simply run:
+if you installed the gem simply run:
 
-    gem install rake
+    ruby_micro_benchmarks
 
-Type "rake" to run the benchmarks.
-
-also you can specify a benchmark file:
+if you have downloaded the sources simply type "rake" to run the benchmarks
+Also you can specify a benchmark file to run:
 
     rake FILE=./benchmarks/operators.rb
+
+
