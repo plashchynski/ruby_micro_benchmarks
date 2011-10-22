@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'ruby_micro_benchmarks'
-  s.version     = '0.1.0'
-  s.date        = '2011-10-20'
+  s.version     = '0.1.1'
+  s.date        = '2011-10-22'
   s.summary     = "Ruby micro benchmarks"
   s.description = "A set of Ruby benchmarks for testing several Ruby methods and practice."
   s.authors     = ["Dmitry Plashchynski"]
