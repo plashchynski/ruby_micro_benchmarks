@@ -13,7 +13,7 @@ You can also get the suite sources from github:
 
 
 == Running
-if you installed the gem simply run:
+if you have installed the gem simply run:
 
     ruby_micro_benchmarks
 

@@ -2,7 +2,7 @@ require 'benchmark'
 
 def head
   $stderr.puts RUBY_DESCRIPTION
-  $stderr.printf "%-35s user     system      total        real\n", ''
+  $stderr.printf "%-31s times         user     system      total        real\n", ''
 end
 
 def run_benchmarks
@@ -26,7 +26,7 @@ end
 
 def measure(title, input_data, count, &block)
   input_string = input_data ? " (#{input_data.size}):" : ''
-  $stderr.printf "%-30s ", title + input_string
+  $stderr.printf "%-30s x%-10d", title + input_string, count
   $stderr.puts Benchmark.measure {
     count.times { block.call(input_data) }
   }.to_s
