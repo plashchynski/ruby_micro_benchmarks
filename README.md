@@ -9,7 +9,7 @@ Created in order to answer questions like what is faster array[0] or array.first
 
 Also from sources:
 
-    git clone git://github.com/plashchynski/ruby-micro-benchmarks.git
+    git clone git://github.com/plashchynski/ruby_micro_benchmarks.git
 
 
 ### Running
